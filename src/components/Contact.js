@@ -17,9 +17,13 @@ export default function Contact() {
 			},
 			body: JSON.stringify(body),
 		})
-			.then((res) => res.json())
+			.then((res) => res.body())
 			.then((data) => console.log(data))
 			.catch((err) => console.log(err));
+		// clear the form
+		e.target.name.value = "";
+		e.target.email.value = "";
+		e.target.message.value = "";
 	};
 	return (
 		<>
