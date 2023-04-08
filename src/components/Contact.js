@@ -10,7 +10,7 @@ export default function Contact() {
 		// send email by sending a post req to /send-email
 		// with the name, email, and message as the body
 		const body = { name, email, message };
-		fetch("/send-email", {
+		fetch("/api/send-email", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

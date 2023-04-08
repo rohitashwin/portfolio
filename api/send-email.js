@@ -1,10 +1,7 @@
-const express = require("express");
 const nodemailer = require("nodemailer");
-const app = express();
-app.use(express.json());
 
 // Configure email server
-app.post("/api/send-email", (req, res) => {
+const app = (req, res) => {
 	try {
 		if (!req.body) throw new Error("No body");
 		console.log(req.body);
@@ -31,6 +28,6 @@ app.post("/api/send-email", (req, res) => {
 		console.log(err);
 		res.status(500).send("Email not sent");
 	}
-});
+};
 
 module.exports = app;
