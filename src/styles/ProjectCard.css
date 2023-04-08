@@ -1,0 +1,47 @@
+.project-container {
+	background-color: #f0f0f0;
+	border-radius: 13px;
+	display: grid;
+	grid-template-columns: 0.7fr 0.3fr;
+	grid-template-rows: 1fr;
+	place-items: center;
+	gap: 10px;
+	padding: 20px;
+}
+
+.project-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 15px;
+	font-size: 1.2rem;
+}
+
+.project-image-container {
+	height: 13rem;
+	width: 100%;
+}
+
+.project-title {
+	margin: 0;
+	padding: 0;
+}
+
+.project-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(
+		71.59% 71.59% at 50% 50%,
+		rgba(226, 226, 226, 0.5) 0%,
+		rgba(152, 152, 152, 0.5) 100%
+	);
+	border-radius: 10px;
+}
+
+.project-link:hover {
+	outline: 3px solid #535353;
+	transition: outline-width 0.08s ease-in-out;
+}

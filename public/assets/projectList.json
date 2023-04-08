@@ -1,0 +1,44 @@
+[
+	{
+		"title": "Mockstock",
+		"description": "Mockstock is a a stock trading simluator application built with Next.js with a firebase database. It features a competetive leaderboard in which you can compete with your friends.",
+		"link": "https://mockstock.live/",
+		"imageLink": "/assets/mockstock.svg"
+	},
+	{
+		"title": "Expense Tracker",
+		"description": "Expense Tracker is a web application built with JS, and tested with Jest. It features a IndexedDB database. It is hosted on Netlify.",
+		"link": "https://rohitashwin.github.io/expense-tracker/",
+		"imageLink": "/assets/expense-tracker.svg"
+	},
+	{
+		"title": "MNIST",
+		"description": "MNIST is a machine learning application that uses a neural network to predict handwritten digits. It has a web interface built with vanilla JS in which you can draw digits and have the neural network predict them. The neural network by default is programmed to run on Apple Silicon.",
+		"link": "https://github.com/rohitashwin/MNIST",
+		"imageLink": "/assets/mnist.svg"
+	},
+	{
+		"title": "Sort Visualizer",
+		"description": "Sort Visualizer is a web application built with vanilla JS that visualizes the sorting algorithms of your choice. It features a custom array generator and various other customizations.",
+		"link": "https://rohitashwin.github.io/sort-visualizer/",
+		"imageLink": "/assets/sort-visualizer.svg"
+	},
+	{
+		"title": "Waygum - A Markup Language",
+		"description": "Waygum is a markup language that is designed to be easy to learn and use. It is built with rust. It is inspired by Markdown & Latex with a focus on programmers.",
+		"link": "https://github.com/rohitashwin/waygum",
+		"imageLink": "/assets/waygum.svg"
+	},
+	{
+		"title": "JSON Parser",
+		"description": "JSON Parser is a JSON parser built with python. It is a library that can be customized to add plugins.",
+		"link": "https://github.com/rohitashwin/json-parser",
+		"imageLink": "/assets/json-parser.svg"
+	},
+	{
+		"title": "Twitter Client",
+		"description": "Twitter Client is a twitter client built with Swift. It features a modern UI using a Twitter API (application no longer functional due to Twitter API changes).",
+		"link": "https://github.com/rohitashwin/twitter-ios",
+		"imageLink": "/assets/twitter-client.svg"
+	}
+]
