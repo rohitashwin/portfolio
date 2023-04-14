@@ -1,10 +1,24 @@
+import path from "path";
 const nodemailer = require("nodemailer");
 
 // Configure email server
 const app = (req, res) => {
 	try {
 		if (!req.body) throw new Error("No body");
-		console.log(req.body);
+
+		const pathToEmail = path.join(__dirname, "test.txt");
+		const fs = require("fs");
+		const filepath = pathToEmail;
+		const content = JSON.stringify(req.body);
+
+		fs.writeFile(filepath, content, (err) => {
+			if (err) {
+				console.error(err);
+				return;
+			}
+			console.log("File written successfully!");
+		});
+
 		if (!process.env.EMAIL || !process.env.PASSWORD) {
 			throw new Error("No email or password");
 		}
