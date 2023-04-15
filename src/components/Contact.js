@@ -16,10 +16,7 @@ export default function Contact() {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify(body),
-		})
-			.then((res) => res.body())
-			.then((data) => console.log(data))
-			.catch((err) => console.log(err));
+		});
 		// clear the form
 		e.target.name.value = "";
 		e.target.email.value = "";
