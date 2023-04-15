@@ -6,7 +6,8 @@ const app = (req, res) => {
 		const mongodb_user = process.env.MONGODB_USER;
 		const mongodb_pass = process.env.MONGODB_PASS;
 		const mongodb_server = process.env.MONGODB_SERVER;
-		const url = `mongodb+srv://${mongodb_user}:${mongodb_pass}@${mongodb_server}`;
+		const mongodb_db = process.env.MONGODB_DB;
+		const url = `mongodb+srv://${mongodb_user}:${mongodb_pass}@${mongodb_server}/${mongodb_db}?retryWrites=true&w=majority`;
 		mongoose.set("strictQuery", false);
 		mongoose.connect(url).then(() => {
 			const emailSchema = new mongoose.Schema({
