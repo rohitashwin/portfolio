@@ -14,7 +14,7 @@ const app = (req, res) => {
 				from: String,
 				message: String,
 			});
-			const Email = mongoose.model("Email", emailSchema);
+			const Email = mongoose.model("email", emailSchema);
 			if (!req.body) {
 				res.status(400).send({ message: "Missing request body!" });
 				return;
@@ -30,8 +30,8 @@ const app = (req, res) => {
 			});
 			email.save().then(() => {
 				res.status(200).send({ message: "Email saved!" });
+				mongoose.connection.close();
 			});
-			mongoose.connection.close();
 		});
 	} catch (err) {
 		res.status(500).send({ message: "Internal server error!" });
