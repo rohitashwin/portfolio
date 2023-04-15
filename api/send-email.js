@@ -14,6 +14,10 @@ const app = (req, res) => {
 		message: String,
 	});
 	const Email = mongoose.model('Email', emailSchema);
+	if (!req.body.subject || !req.body.from || !req.body.message) {
+		res.status(400).send({ message: 'Missing required fields!' });
+		return;
+	}
 	const email = new Email({
 		subject: req.body.subject,
 		from: req.body.from,
