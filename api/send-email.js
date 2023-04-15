@@ -19,8 +19,8 @@ const app = (req, res) => {
 		return;
 	}
 	const email = new Email({
-		subject: req.body.subject,
-		from: req.body.from,
+		subject: req.body.name,
+		from: req.body.email,
 		message: req.body.message,
 	});
 	email.save().then(() => {
