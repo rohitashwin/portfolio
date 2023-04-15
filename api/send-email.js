@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const app = (req, res) => {
+const app = async (req, res) => {
 	try {
 		// Using mongodb for now, then will switch to postmark or some other email service
 		const mongodb_user = process.env.MONGODB_USER;
@@ -8,13 +8,17 @@ const app = (req, res) => {
 		const mongodb_server = process.env.MONGODB_SERVER;
 		const url = `mongodb+srv://${mongodb_user}:${mongodb_pass}@${mongodb_server}`;
 		mongoose.set("strictQuery", false);
-		mongoose.connect(url);
+		await mongoose.connect(url);
 		const emailSchema = new mongoose.Schema({
 			subject: String,
 			from: String,
 			message: String,
 		});
 		const Email = mongoose.model("Email", emailSchema);
+		if (!req.body) {
+			res.status(400).send({ message: "Missing request body!" });
+			return;
+		}
 		if (!req.body.name || !req.body.email || !req.body.message) {
 			res.status(400).send({ message: "Missing required fields!" });
 			return;
