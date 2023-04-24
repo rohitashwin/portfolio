@@ -54,6 +54,7 @@
 
 .form-group > input {
 	display: flex;
+	font-family: inherit;
 	align-items: center;
 	height: 3.3rem;
 	font-size: 1.1rem;
@@ -116,6 +117,7 @@
 	padding: 10px 15px;
 	font-size: 1.1rem;
 	font-weight: 600;
+	font-family: inherit;
 	color: black;
 	border: none;
 	border-radius: 100px;
